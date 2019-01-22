@@ -18,6 +18,16 @@ libraryDependencies ++= Seq(
   "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
 )
 
+val circeVersion = "0.11.1"
+
+libraryDependencies ++= Seq(
+  "io.circe" %% "circe-generic" % circeVersion,
+  "io.circe" %% "circe-core" % circeVersion,
+  "io.circe" %% "circe-parser" % circeVersion
+)
+
+
+
 enablePlugins(SbtTwirl)
 enablePlugins(ScalatraPlugin)
 enablePlugins(JavaAppPackaging)

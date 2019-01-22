@@ -1,6 +1,12 @@
 package foo
 
 import org.scalatra._
+import io.circe._
+import io.circe.parser._
+import io.circe.syntax._
+import io.circe.generic.auto._
+import FlowerData._
+
 
 class foo extends ScalatraServlet {
 
@@ -8,12 +14,12 @@ class foo extends ScalatraServlet {
     views.html.hello()
   }
 
-  get("/deneme") {
-    views.html.hello()
+  get("/flower") {
+    FlowerData.all.asJson
   }
 
   get("/json") {
-    FlowerData.all
+    List(1,2).asJson
   }
 
 }
