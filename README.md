@@ -3,7 +3,7 @@
 ## Build & Run ##
 
 ```sh
-$ cd my-scalatra-web-app
+$ cd scalatra-circe-example
 $ sbt
 > jetty:start
 > browse
