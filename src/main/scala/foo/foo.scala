@@ -8,4 +8,8 @@ class foo extends ScalatraServlet {
     views.html.hello()
   }
 
+  get("/deneme") {
+    views.html.hello()
+  }
+
 }
